@@ -1,12 +1,15 @@
 {
   "version": "4",
   "specifiers": {
-    "npm:autoprefixer@^10.4.20": "10.4.20_postcss@8.4.47",
+    "npm:@tailwindcss/forms@~0.5.7": "0.5.9_tailwindcss@3.4.14__postcss@8.4.47",
+    "npm:@tailwindcss/typography@~0.5.10": "0.5.15_tailwindcss@3.4.14__postcss@8.4.47",
+    "npm:autoprefixer@^10.4.16": "10.4.20_postcss@8.4.47",
     "npm:axios@^1.7.4": "1.7.7",
     "npm:concurrently@^9.0.1": "9.1.0",
     "npm:laravel-vite-plugin@1": "1.0.5_vite@5.4.10",
+    "npm:postcss@^8.4.32": "8.4.47",
     "npm:postcss@^8.4.47": "8.4.47",
-    "npm:tailwindcss@^3.4.13": "3.4.14_postcss@8.4.47",
+    "npm:tailwindcss@^3.4.0": "3.4.14_postcss@8.4.47",
     "npm:vite@5": "5.4.10"
   },
   "npm": {
@@ -190,6 +193,23 @@
     },
     "@rollup/rollup-win32-x64-msvc@4.24.4": {
       "integrity": "sha512-LTw1Dfd0mBIEqUVCxbvTE/LLo+9ZxVC9k99v1v4ahg9Aak6FpqOfNu5kRkeTAn0wphoC4JU7No1/rL+bBCEwhg=="
+    },
+    "@tailwindcss/forms@0.5.9_tailwindcss@3.4.14__postcss@8.4.47": {
+      "integrity": "sha512-tM4XVr2+UVTxXJzey9Twx48c1gcxFStqn1pQz0tRsX8o3DvxhN5oY5pvyAbUx7VTaZxpej4Zzvc6h+1RJBzpIg==",
+      "dependencies": [
+        "mini-svg-data-uri",
+        "tailwindcss"
+      ]
+    },
+    "@tailwindcss/typography@0.5.15_tailwindcss@3.4.14__postcss@8.4.47": {
+      "integrity": "sha512-AqhlCXl+8grUz8uqExv5OTtgpjuVIwFTSXTrh8y9/pw6q2ek7fJ+Y8ZEVw7EB2DCcuCOtEjf9w3+J3rzts01uA==",
+      "dependencies": [
+        "lodash.castarray",
+        "lodash.isplainobject",
+        "lodash.merge",
+        "postcss-selector-parser@6.0.10",
+        "tailwindcss"
+      ]
     },
     "@types/estree@1.0.6": {
       "integrity": "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="
@@ -540,6 +560,15 @@
     "lines-and-columns@1.2.4": {
       "integrity": "sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg=="
     },
+    "lodash.castarray@4.4.0": {
+      "integrity": "sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q=="
+    },
+    "lodash.isplainobject@4.0.6": {
+      "integrity": "sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA=="
+    },
+    "lodash.merge@4.6.2": {
+      "integrity": "sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ=="
+    },
     "lodash@4.17.21": {
       "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
     },
@@ -564,6 +593,9 @@
       "dependencies": [
         "mime-db"
       ]
+    },
+    "mini-svg-data-uri@1.4.4": {
+      "integrity": "sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg=="
     },
     "minimatch@9.0.5": {
       "integrity": "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==",
@@ -656,7 +688,14 @@
       "integrity": "sha512-HQbt28KulC5AJzG+cZtj9kvKB93CFCdLvog1WFLf1D+xmMvPGlBstkpTEZfK5+AN9hfJocyBFCNiqyS48bpgzQ==",
       "dependencies": [
         "postcss",
-        "postcss-selector-parser"
+        "postcss-selector-parser@6.1.2"
+      ]
+    },
+    "postcss-selector-parser@6.0.10": {
+      "integrity": "sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==",
+      "dependencies": [
+        "cssesc",
+        "util-deprecate"
       ]
     },
     "postcss-selector-parser@6.1.2": {
@@ -841,7 +880,7 @@
         "postcss-js",
         "postcss-load-config",
         "postcss-nested",
-        "postcss-selector-parser",
+        "postcss-selector-parser@6.1.2",
         "resolve",
         "sucrase"
       ]
@@ -947,12 +986,14 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
-        "npm:autoprefixer@^10.4.20",
+        "npm:@tailwindcss/forms@~0.5.7",
+        "npm:@tailwindcss/typography@~0.5.10",
+        "npm:autoprefixer@^10.4.16",
         "npm:axios@^1.7.4",
         "npm:concurrently@^9.0.1",
         "npm:laravel-vite-plugin@1",
-        "npm:postcss@^8.4.47",
-        "npm:tailwindcss@^3.4.13",
+        "npm:postcss@^8.4.32",
+        "npm:tailwindcss@^3.4.0",
         "npm:vite@5"
       ]
     }
