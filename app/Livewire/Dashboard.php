@@ -21,25 +21,18 @@ class Dashboard extends Component
     public string $description;
     public ToDoStatus $status = ToDoStatus::New;
 
-    #[Locked]
-    public User $user;
-
     public int $category;
     public array $tags;
 
-    public function mount(Request $request) {
-
-        $this->user = $request->user();
-
-    }
 
 
     public function clearFields() {
         $this->reset();
     }
 
-    public function save() {
-        $this->user
+    public function save(Request $request) {
+        $request
+            ->user()
             ->todos()
             ->create([
                     'title'=>$this->title,
