@@ -5,6 +5,7 @@
         </h2>
     </x-slot>
 
-    @livewire('form.to-do')
-    
+    {{-- Todo Menu --}}
+    <x-util.menu/>
+
 </x-app-layout>

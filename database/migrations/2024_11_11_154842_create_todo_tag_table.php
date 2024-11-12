@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('todo_tag', function (Blueprint $table) {
 
             $table->foreignId('todo_id')
-                    ->constrained()
-                    ->cascadeOnUpdate()
-                    ->cascadeOnDelete();
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
 
             $table->foreignId('tag_id')
-                    ->constrained()
-                    ->cascadeOnUpdate()
-                    ->cascadeOnDelete();
+                ->constrained()
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
 
             $table->primary(['todo_id', 'tag_id']);
 

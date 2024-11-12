@@ -19,22 +19,22 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreignId('user_id')
-                    ->constrained()
-                    ->cascadeOnDelete()
-                    ->cascadeOnUpdate();
+                ->constrained()
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
 
             $table->foreignId('tag_id')
-                    ->nullable()
-                    ->constrained()
-                    ->nullOnDelete()
-                    ->cascadeOnUpdate();
+                ->nullable()
+                ->constrained()
+                ->nullOnDelete()
+                ->cascadeOnUpdate();
 
             $table->foreignId('category_id')
-                    ->nullable()
-                    ->constrained(table: 'categories')
-                    ->nullOnDelete()
-                    ->cascadeOnUpdate();
-            
+                ->nullable()
+                ->constrained(table: 'categories')
+                ->nullOnDelete()
+                ->cascadeOnUpdate();
+
         });
     }
 
