@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class ToDo extends Model
+class Todo extends Model
 {
     /** @use HasFactory<\Database\Factories\ToDoFactory> */
     use HasFactory;
