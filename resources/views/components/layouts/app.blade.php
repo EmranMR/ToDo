@@ -33,7 +33,7 @@
             @endif
 
             <!-- Page Content -->
-            <main class="grow flex">
+            <main class="bg-blue-50 w-2/4 h-full m-auto">
                 {{ $slot }}
             </main>
         </div>

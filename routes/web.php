@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Dashboard;
 use App\Livewire\Todo\Index as ToDoIndex;
 use App\Livewire\Todo\Show as ToDoShow;
 use App\Livewire\Todo\Create as ToDoCreate;
@@ -15,9 +16,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
 
     Route::prefix('todo/')
         ->name('todo.')
