@@ -34,6 +34,8 @@
 
             <!-- Page Content -->
             <main class="bg-blue-50 w-2/4 h-full m-auto">
+            {{-- Todo Menu --}}
+            <x-util.menu/>
                 {{ $slot }}
             </main>
         </div>
