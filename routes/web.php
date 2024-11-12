@@ -21,9 +21,8 @@ Route::middleware([
     Route::prefix('todo/')
         ->name('todo.')
         ->group(function() {
-            Route::get('/create', ToDoCreate::class)->name('create');
-            Route::get('/update', ToDoUpdate::class)->name('update');
-            Route::get('/show', ToDoShow::class)->name('show');
             Route::get('/', ToDoIndex::class)->name('index');
+            Route::get('/update', ToDoUpdate::class)->name('update');
+            Route::get('/archive', ToDoShow::class)->name('archive');
     });
 });
