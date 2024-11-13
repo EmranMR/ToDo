@@ -14,29 +14,29 @@ use Livewire\Component;
 class Index extends Component
 {
     use InteractsWithBanner;
-    
 
     #[Computed]
     public function todos(): Collection
     {
         /** @var Builder $todos */
         $todos = Auth::user()->todos();
-        
+
         return $todos->where('status', '!=', ToDoStatus::Archived)->get();
-        
-        
+
     }
 
-    public function archive(int $id): void {
+    public function archive(int $id): void
+    {
 
         /** @var Todo $todo */
         $todo = Todo::find($id);
 
-        if(!$todo) {
+        if (! $todo) {
             $this->dangerBanner('Todo does not exist!');
+
             return;
         }
-        
+
         // Remove from the collection
         $this->todos->forget($id);
 
@@ -45,7 +45,7 @@ class Index extends Component
         $todo->save();
 
         // Notify
-        $this->banner("Successfully Archived");
+        $this->banner('Successfully Archived');
 
     }
 

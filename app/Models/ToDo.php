@@ -7,12 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
- * 
- *
  * @property int $id
  * @property string $title
  * @property string $description
@@ -26,6 +23,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Tag> $tags
  * @property-read int|null $tags_count
  * @property-read \App\Models\User $user
+ *
  * @method static \Database\Factories\TodoFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Todo newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Todo newQuery()
@@ -39,6 +37,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Todo whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Todo whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Todo whereUserId($value)
+ *
  * @mixin \Eloquent
  */
 class Todo extends Model
