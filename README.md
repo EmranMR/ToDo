@@ -1,3 +1,10 @@
+### Examples
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/96c2b62e-5936-4fe7-8fb4-f6f5bac9bcf8">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/58e30930-5447-4c7c-b6bc-23c352c43cc6">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/d193b839-cb3b-48e2-a03f-fb7c854ec67d">
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/d229727b-e1f5-40d5-8f89-4b73c714a53c">
+
+
 ### Some Notes
 
 ---
