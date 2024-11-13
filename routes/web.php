@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Dashboard;
+use App\Livewire\Todo\Archives;
 use App\Livewire\Todo\Index as ToDoIndex;
 use App\Livewire\Todo\Show as ToDoShow;
 use App\Livewire\Todo\Create as ToDoCreate;
@@ -21,9 +22,9 @@ Route::middleware([
     Route::prefix('todo/')
         ->name('todo.')
         ->group(function() {
+            Route::get('/archives', Archives::class)->name('archives');
             Route::get('/{todo}/update', ToDoUpdate::class)->name('update');
             Route::get('/{todo}', ToDoShow::class)->name('show');
-            Route::get('/archives', ToDoShow::class)->name('archives');
             Route::get('/', ToDoIndex::class)->name('index');
     });
 });
