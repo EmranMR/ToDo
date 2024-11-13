@@ -22,14 +22,14 @@
         placeholder="Title" 
         required />
 
-    @error('title')
+    @error('description')
     <label
         class=" text-sm text-red-500 font-light"
         for="title">{{$message}}</label>
     @enderror
     <textarea
         class="mt-2 rounded-xl" 
-        wire:model="description"
+        wire:model.blur="description"
         name="description"
         rows="10"
         id="description"
